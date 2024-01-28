@@ -8,3 +8,9 @@ Content-Type: application/json
 
 ### Get books
 GET http://localhost:8080/books
+
+### Create books
+POST http://localhost:8080/books/load
+Content-Type: application/json
+
+< ./out.json

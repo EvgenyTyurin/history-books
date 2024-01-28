@@ -27,4 +27,11 @@ public class WebController {
     List<Book> getBooks() {
         return bookRepository.findAll();
     }
+
+    @PostMapping("/books/load")
+    void createBooks(@RequestBody List<Book> books) {
+        books.forEach(book -> book.setId(UUID.randomUUID()));
+        bookRepository.saveAll(books);
+        System.out.println("Saved " + books);
+    }
 }

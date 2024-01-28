@@ -15,4 +15,10 @@ open class Book {
 
     @Column(name = "title", nullable = true)
     open var title: String? = null
+
+    @Column(name = "authors", nullable = true)
+    open var authors: String? = null
+
+    @Column(name = "cover_image_name", nullable = true)
+    open var coverImageName: String? = null
 }
